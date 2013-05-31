@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Jquery Smart Smiley Plugin</title>
+
+<meta name="robots" content="index,follow" />
+<meta name="keywords"
+  content="Jquery Smiley Plugin , Jquery Smiley , Smart Smiley" />
+<meta name="description"
+	content="A Jquery plugin for smileys and emoticons ." />
+<meta name="author" content="Murtaza Kanpurwala" />
+<meta name="Copyright" content="© 2013 mastermurtaza.com" />
+<meta name="Designer" content="Murtaza Kanpurwala" />
+<meta name="Publisher" content="Murtaza Kanpurwala" />
+<meta name="document-classification"
+	content="Website design and development, India" />
+<meta name="document-type" content="Public" />
+<meta name="document-rating" content="Safe for Kids" />
+<meta name="document-distribution" content="Global" />
+<meta name="robots" content="ALL, INDEX, FOLLOW" />
+<meta name="googlebot" content="index, follow" />
+<meta name="revisit-after" content="10 Days" />
+<meta name="Expires" content="never" />
+
+<!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans'
+	rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/reset.css" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+	<header class="wrapper">
+		<h2 class="title">Check Out Demo</h2>
+		<p align="center">Emoticons used from <a href="http://code.google.com/p/emoticony/wiki/Emoticons" target="_blank">Google Emoticony</a></p><br/>
+		<nav>
+			<ul>
+				<li></li>
+			</ul>
+		</nav>
+	</header>
+
+	<section class="wrapper">
+
+		<article class="left">
+			<header>
+				<h3>Chat Box</h3>
+			</header>
+			<div class="box">
+				<div id="chatbox" class="smiley"></div>
+				<input type="text" multiple="multiple" class="smiley inputtext" name="inputsmiley"
+					id="inputsmiley" />
+				<button type="button" id="sendchat" class="button">Send</button>
+			</div>
+		</article>
+
+		<article class="left">
+			<header>
+				<h3>Text Editor</h3>
+				
+			</header>
+			<div class="box">
+			<p align="center">Click Outside Editor to See Emoticons</p>
+				<div id="chatedit"></div>
+				<div contenteditable="true" class="editable smiley"></div>
+			</div>
+		</article>
+
+	</section>
+
+
+	<footer>
+		<p>
+			Copyright 2013 <a href="http://mastermurtaza.com"
+				title="web designer" target="_blank">Murtaza Kanpurwala</a>
+		</p>
+	</footer>
+
+
+
+</body>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.textarea-expander.js"></script>
+<script src="js/smiley.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+jQuery(document).ready(function(){
+$(".button").click(function(){
+	if($(".inputtext").val().length > 0 ) {
+		$("#chatbox").append($(".inputtext").val() + "<br/>");
+		$(".inputtext").val("");
+		$(".smiley").dosmile();
+		
+	}
+});
+
+$(".inputtext").keypress(function(e) {
+    if(e.which == 13) {
+    	if($(".inputtext").val().length > 0 ) {
+    		$("#chatbox").append($(".inputtext").val() + "<br/>");
+    		$(".inputtext").val("");
+    		$(".smiley").dosmile();
+    		
+    	}
+    }
+});
+
+$(".smiley").blur(function() {
+	$(".smiley").dosmile();
+});
+
+});
+</script>
+
+</html>
