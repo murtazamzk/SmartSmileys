@@ -1,0 +1,88 @@
+body {
+  color: #4C4C4C;
+	font-family: 'Droid Sans', sans-serif;
+	font-size: 15px;
+	line-height: 25px;
+	background: #F6F8F8;
+}
+
+.wrapper {
+	width: 800px;
+	margin: 0 auto;
+}
+
+.title {
+	color:#446CB3;
+	text-align: center;
+	margin: 20px 0px;
+	font-size:30px;
+	font-weight:normal;
+	font-style:normal;
+	font-family: 'Droid Sans', sans-serif;
+}
+
+.box {
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	-khtml-border-radius:5px;
+	background: #fff;
+	border:1px solid #ccc;
+	padding: 10px;
+	
+}
+
+#chatbox {
+	overflow: auto;
+	max-height: 300px;
+	margin-bottom: 5px;
+}
+
+.left {
+	width:40%;
+	float:left;
+	margin-right: 10%;
+}
+
+.left:last-child {
+	width:50%;
+	margin-left: 0%;
+	margin-right: 0px;
+}
+
+.inputtext {
+	width:70%;
+	height:20px;
+}
+
+.editable {
+	width:95%;
+	height:auto;
+	border:1px solid #ccc;
+	padding:5px;
+	min-height: 200px;
+	max-height: 400px;
+	overflow: auto;;
+}
+
+.button {
+	width:25%;
+	height:26px;
+	vertical-align: middle;
+	background: #446CB3;
+	color:#fff;
+	border: 1px solid #ccc;
+}
+
+footer {
+	position: fixed;
+	bottom:0px;
+	margin:0 auto;
+	padding-bottom:10px;
+	text-align: center;
+	width:100%;
+}
+
+a {
+	color:inherit;
+}
